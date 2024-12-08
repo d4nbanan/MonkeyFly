@@ -1,0 +1,365 @@
+/* The container */
+#signup .container {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 15px;
+    font-size: 9.4px;
+    line-height: 13px;
+    color: #9ea6b7;
+}
+
+#signup .container a {
+    text-decoration: underline;
+}
+
+/* Hide the browser's default checkbox */
+#signup .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.intl-tel-input .flag-container {
+    width: 100%;
+}
+
+/* Create a custom checkbox */
+#signup .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #EDF0F7;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+#signup .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+#signup .container input:checked ~ .checkmark {
+    background: -webkit-gradient(linear, left top, left bottom, from(#a1d323), to(#549722));
+    background: linear-gradient(180deg, #a1d323 0%, #549722 100%);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#signup .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+#signup .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+#signup .container .checkmark:after {
+    content: url(../img/mark.svg);
+    left: 4px;
+    top: 2px;
+    position: absolute;
+    z-index: 1;
+    height: 16px;
+    width: 16px;
+}
+
+/*checkbox end*/
+.dropdown {
+    width: 100%;
+    display: inline-block;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    position: relative;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    height: 45px;
+    color: rgba(7, 12, 25, .8);
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #edf0f7;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dropdown:after {
+    content: url(../img/arrow.svg);
+    position: absolute;
+    right: 15px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown .select span {
+    color: rgba(7, 12, 25, .8);
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dropdown .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.dropdown.active:hover,
+.dropdown.active {
+    border: 2px solid #b7ea36;
+    background: #edf0f7;
+}
+
+.dropdown.active:after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 40%;
+}
+
+.dropdown.active .select > i {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 55px;
+    left: 0;
+    margin-top: 1px;
+    -webkit-box-shadow: 0 1px 2px rgb(204, 204, 204);
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+
+.dropdown .dropdown-menu::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #9d9fa5;
+}
+
+.dropdown .dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown .dropdown-menu::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+}
+
+.dropdown .dropdown-menu li .currency-icon,
+.dropdown .select span .currency-icon {
+    margin-right: 10px;
+    display: -webkit-box;
+    width: 42px;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    color: #aab4ce;
+}
+
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+
+.dropdown .dropdown-menu li:hover {
+    background-color: #edf0f7
+}
+
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+
+/*dropdown-end*/
+#signup .popup__container .popup__content {
+    background: #fff;
+    border: 0;
+    border-radius: 15px;
+    max-width: 390px;
+}
+
+#signup .popup__close-btn {
+    background: #edf0f7;
+}
+
+#signup .popup__footer {
+    font-size: 11px;
+    color: rgba(106, 118, 144, .65);
+}
+
+#signup .popup__footer .popuper {
+    color: #000;
+}
+
+#signup form button {
+    -webkit-box-shadow: 0 6px 18px 0 rgb(14 161 81 / 30%);
+    box-shadow: 0 6px 18px 0 rgb(14 161 81 / 30%);
+    text-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.15;
+    border-radius: 8px;
+}
+
+#signup h3 {
+    color: #000;
+}
+
+#signup form input {
+    background-color: #edf0f7;
+    border-radius: 10px;
+    height: 45px;
+    color: rgba(7, 12, 25, .8);
+    padding: 0 15px;
+}
+
+#signup form input::-webkit-input-placeholder {
+    color: rgba(7, 12, 25, .5);
+}
+
+#signup form input:-ms-input-placeholder {
+    color: rgba(7, 12, 25, .5);
+}
+
+#signup form input::placeholder {
+    color: rgba(7, 12, 25, .5);
+}
+
+.password-inpt {
+    position: relative;
+}
+
+.password-inpt img {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    opacity: .4;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.password-inpt img:hover,
+.password-inpt img.active {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.intl-tel-input {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.intl-tel-input .flag-dropdown {
+    width: 100%;
+}
+
+.intl-tel-input .country-list {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#phone {
+    padding-left: 110px !important;
+}
+
+.intl-tel-input .selected-flag {
+    width: 100px !important;
+    /*    padding: 0 16px 0 8px !important;*/
+}
+
+.intl-tel-input .selected-flag .iti-arrow {
+    border: 0 !important;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 5px;
+    background-image: url(../img/arrow.svg);
+    width: 8px !important;
+    background-repeat: no-repeat;
+    height: 5px !important;
+    background-position: center;
+    margin-top: 0 !important;
+}
+
+.intl-tel-input .country-list::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #9d9fa5;
+}
+
+.intl-tel-input .country-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.intl-tel-input .country-list::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.intl-tel-input.separate-dial-code .selected-dial-code,
+.intl-tel-input .country-list .country-name {
+    color: rgba(7, 12, 25, .8);
+}
